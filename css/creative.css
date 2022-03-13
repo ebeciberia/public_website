@@ -70,10 +70,17 @@ h6{
   font-weight: bold;
 }
 
+
 h7{
   font-family: 'Fira Sans Condensed';
   font-weight: bold;
   font-size: 50px;
+}
+
+h8{
+  font-family: 'Fira Sans Condensed';
+  font-weight: bold;
+  font-size: 17px;
 }
 
 p,
@@ -501,8 +508,8 @@ header.masthead p {
 .btn {
   font-weight: 700;
   text-transform: uppercase;
-  border: 5px solid #000;
-  background-color: #e2c044;
+  border: 5px solid #fff;
+  background-color: #686867;
   color:#fff;
   border-radius: 0px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -704,6 +711,13 @@ ul.safetyList {
   color: #fff;
 }
 
+.team-members .team-desc h8{
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: #fff;
+}
 .team-members:hover .team-avatar:after {
   background: rgba(47, 60, 72, 0.5);
   transition-duration: 300ms;
@@ -874,3 +888,169 @@ height: 10px;
 .faq.active svg{
   transform: rotate(180deg);
 }
+
+/*************************
+ * GRID SCHEDULE LAYOUT
+ *************************/
+ @media screen and (min-width: 50px) {
+  .schedule {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1em;
+    -ms-grid-rows: [tracks] auto [time-0000] 0.5fr [time-0700] 0.5fr [time-0800] 0.5fr [time-0900] 0.5fr [time-0930] 0.5fr [time-1000] 0.5fr [time-1030] 0.5fr [time-1230] 0.5fr [time-1300] 0.5fr [time-1400] 0.5fr [time-1500] 0.5fr [time-1530] 0.5fr [time-1900] 0.5fr [time-1930] 0.5fr [time-2030] 0.5fr [time-2359] 0.5fr;
+        grid-template-rows: [tracks] auto [time-0000] 0.5fr [time-0700] 0.5fr [time-0800] 0.5fr [time-0900] 0.5fr [time-0930] 0.5fr [time-1000] 0.5fr [time-1030] 0.5fr [time-1230] 0.5fr  [time-1300] 0.5fr [time-1400] 0.5fr [time-1500] 0.5fr [time-1530] 0.5fr [time-1900] 0.5fr [time-1930] 0.5fr [time-2030] 0.5fr [time-2359] 0.5fr;
+    
+        -ms-grid-columns: [times] 4em [track-1-start] 1fr [track-1-end track-2-start] 1fr [track-2-end track-3-start] 1fr [track-3-end track-4-start] 1fr [track-4-end];
+        grid-template-columns: [times] 4em [track-1-start] 1fr [track-1-end track-2-start] 1fr [track-2-end track-3-start] 1fr [track-3-end track-4-start] 1fr [track-4-end];
+  }
+}
+
+.time-slot {
+  grid-column: times;
+}
+
+.track-slot {
+  display: none;
+  /* hidden on small screens and browsers without grid support */
+}
+
+@supports (display: grid) {
+  @media screen and (min-width: 50px) {
+    .track-slot {
+      display: block;
+      padding: 10px 5px 5px;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      
+    }
+  }
+}
+
+/* Small-screen & fallback styles */
+.session {
+  margin-bottom: 1em;
+}
+
+@supports (display: grid) {
+  @media screen and (min-width: 50px) {
+    .session {
+      margin: 0;
+    }
+  }
+}
+
+/*************************
+     * VISUAL STYLES
+     * Design-y stuff ot particularly important to the demo
+     *************************/
+
+
+.session {
+  padding: .5em;
+  border-radius: 2px;
+  font-size: 17px;
+  -webkit-box-shadow: #69963f 1px 1px 0, rgba(0, 0, 0, 0.3) 4px 4px 0;
+          box-shadow: #69963f 1px 1px 0, rgba(0, 0, 0, 0.3) 4px 4px 0;
+}
+
+.session-title,
+.session-time,
+.session-track,
+.session-presenter {
+  display: block;
+}
+
+.session-title,
+.time-slot {
+  margin: 0;
+  font-size: 1em;
+}
+
+.session-title a {
+  color: #fff;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+.session-title a:hover {
+  font-style: italic;
+}
+
+.session-title a:focus {
+  outline: 2px dotted rgba(255, 255, 255, 0.8);
+}
+
+.track-slot,
+.time-slot {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.track-1 {
+  background-color: #1259B2;
+  color: #fff;
+}
+.track-5 {
+  background-color: #80aadd;
+  color: #fff;
+} 
+
+.track-6 {
+  background-color: #544D69;
+  color: #fff;
+} 
+.track-2 {
+  background-color: #69963f;
+  color: #fff;
+}
+
+.track-3 {
+  background-color: #544D69;
+  color: #fff;
+}
+
+.track-4 {
+  background-color: #c35500;
+  color: #fff;
+}
+
+.track-7 {
+  background-color: #c7aa08;
+  color: #fff;
+}
+
+.track-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ccc;
+  color: #000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.text {
+  max-width: 750px;
+  font-size: 18px;
+  margin: 0 auto 50px;
+}
+
+.meta {
+  color: #555;
+  font-style: italic;
+}
+
+.meta a {
+  color: #555;
+}
+
+
+/*# sourceMappingURL=style.css.map */
