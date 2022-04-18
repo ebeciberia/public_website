@@ -27,7 +27,7 @@ hr.blue {
 }
 
 a {
-  color: #1a67a8 ;
+  color: #3c6F9b ;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -141,7 +141,7 @@ li {
   color: #F8D525;
 }
 .text-blue {
-  color: rgb(25, 115, 190);
+  color: #3c6F9b;
 }
 .text-black {
   color: #363739;
@@ -353,10 +353,13 @@ margin: 0px 0 30px;
   margin: 0 0 5px;
 }
 
-@media(max-width:500px){
+@media(max-width:700px){
   .banner h2{
-     font-size: 5px; 
+     font-size: 50px; 
   }
+  .banner h3{
+    font-size: 40px; 
+ }
   .time{
       margin: 5px;
   }
@@ -516,7 +519,7 @@ header.masthead p {
 }
 
 .btn-blue {
-  background-color: #3669b2;
+  background-color: #3c6F9b;
 }
 
 .btn-xl {
@@ -526,7 +529,7 @@ header.masthead p {
 .btn:hover, .btn:focus, .btn:active, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color:#fff;
   background-color: #A0CCDA !important;	
-  border-color: #3669b2;
+  border-color: #3c6F9b;
 }
 
 .btn-primary {
@@ -654,6 +657,14 @@ ul.safetyList {
   margin-bottom: 35px;
   height: 28vh;
 }
+.categories {
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 35px;
+  
+}
 
 .team-members .team-avatar {
   position: relative;
@@ -680,7 +691,50 @@ ul.safetyList {
   width: 100%;
 }
 
+.categories .team-avatar {
+  position: relative;
+  size: inherit;
+}
+
+.categories .team-avatar:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  position: absolute;
+  background: rgba(129, 129, 129, 0.1);
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+.categories .team-avatar img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+
 .team-members .team-desc {
+  left: auto;
+  bottom: 0;
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  opacity: 0;
+  color: #fff;
+  -webkit-transform: translate3d(0, 10%, 0);
+  transform: translate3d(0, 10%, 0);
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.categories .team-desc {
   left: auto;
   bottom: 0;
   width: 100%;
@@ -725,6 +779,13 @@ ul.safetyList {
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 }
 
+.categories:hover .team-avatar:after {
+  /*background: rgba(47, 60, 72, 0.5);*/
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
 .team-members:hover .team-desc {
   -webkit-transform: translate3d(0, -15%, 0);
   transform: translate3d(0, -15%, 0);
@@ -740,6 +801,49 @@ ul.safetyList {
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
+
+.categories .team-desc h4 {
+  font-size: 2.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  border: 3px solid #fff;
+}
+
+.categories .team-desc span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.categories .team-desc h8{
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: #fff;
+}
+
+
+.categories:hover .team-desc {
+  -webkit-transform: translate3d(0, -15%, 0);
+  transform: translate3d(0, -15%, 0);
+  -webkit-transform: translate3d(0, -20%, 0);
+  transform: translate3d(0, -30%, 0);
+}
+
+.categories:hover .team-desc {
+  opacity: 1;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
 .team-size{
   max-width: 70vw;
 }
@@ -892,13 +996,13 @@ height: 10px;
 /*************************
  * GRID SCHEDULE LAYOUT
  *************************/
- @media screen and (min-width: 50px) {
+ @media screen and (min-width: 700px) {
   .schedule {
     display: -ms-grid;
     display: grid;
     grid-gap: 1em;
-    -ms-grid-rows: [tracks] auto [time-0000] 0.5fr [time-0700] 0.5fr [time-0800] 0.5fr [time-0900] 0.5fr [time-0930] 0.5fr [time-1000] 0.5fr [time-1030] 0.5fr [time-1230] 0.5fr [time-1300] 0.5fr [time-1400] 0.5fr [time-1500] 0.5fr [time-1530] 0.5fr [time-1900] 0.5fr [time-1930] 0.5fr [time-2030] 0.5fr [time-2359] 0.5fr;
-        grid-template-rows: [tracks] auto [time-0000] 0.5fr [time-0700] 0.5fr [time-0800] 0.5fr [time-0900] 0.5fr [time-0930] 0.5fr [time-1000] 0.5fr [time-1030] 0.5fr [time-1230] 0.5fr  [time-1300] 0.5fr [time-1400] 0.5fr [time-1500] 0.5fr [time-1530] 0.5fr [time-1900] 0.5fr [time-1930] 0.5fr [time-2030] 0.5fr [time-2359] 0.5fr;
+    -ms-grid-rows: [tracks] auto [time-0000] 0.5fr [time-0400] 0.5fr [time-0500] 0.5fr [time-0700] 0.5fr [time-0800] 0.5fr [time-0900] 0.5fr [time-0930] 0.5fr [time-1000] 0.5fr [time-1030] 0.5fr [time-1230] 0.5fr [time-1300] 0.5fr [time-1400] 0.5fr [time-1500] 0.5fr [time-1530] 0.5fr [time-1900] 0.5fr [time-1930] 0.5fr [time-2000] 0.5fr [time-2030] 0.5fr [time-2130] 0.5fr [time-2359] 0.5fr;
+        grid-template-rows: [tracks] auto [time-0000] 0.5fr [time-0400] 0.5fr [time-0500] 0.5fr [time-0700] 0.5fr [time-0800] 0.5fr [time-0900] 0.5fr [time-0930] 0.5fr [time-1000] 0.5fr [time-1030] 0.5fr [time-1230] 0.5fr  [time-1300] 0.5fr [time-1400] 0.5fr [time-1500] 0.5fr [time-1530] 0.5fr [time-1900] 0.5fr [time-1930] 0.5fr [time-2000] 0.5fr [time-2030] 0.5fr [time-2130] 0.5fr [time-2359] 0.5fr;
     
         -ms-grid-columns: [times] 4em [track-1-start] 1fr [track-1-end track-2-start] 1fr [track-2-end track-3-start] 1fr [track-3-end track-4-start] 1fr [track-4-end];
         grid-template-columns: [times] 4em [track-1-start] 1fr [track-1-end track-2-start] 1fr [track-2-end track-3-start] 1fr [track-3-end track-4-start] 1fr [track-4-end];
@@ -915,7 +1019,7 @@ height: 10px;
 }
 
 @supports (display: grid) {
-  @media screen and (min-width: 50px) {
+  @media screen and (min-width: 700px) {
     .track-slot {
       display: block;
       padding: 10px 5px 5px;
@@ -934,7 +1038,7 @@ height: 10px;
 }
 
 @supports (display: grid) {
-  @media screen and (min-width: 50px) {
+  @media screen and (min-width: 700px) {
     .session {
       margin: 0;
     }
