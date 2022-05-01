@@ -320,7 +320,7 @@ h2{
   font-weight: normal;
   font-size: 80px;
   color: #ffffff;
-  margin: 250px 0 10px;
+  margin: 150px 0 10px;
   
 }
 
@@ -328,7 +328,7 @@ h3{
 font-weight: bolder;
 font-size: 50px;
 color: #ffffff;
-margin: 0px 0 30px;
+margin: 0px 0 40px;
 
 }
 
@@ -522,6 +522,10 @@ header.masthead p {
   background-color: #3c6F9b;
 }
 
+.btn-green {
+  background-color: #69963f;
+}
+
 .btn-xl {
   padding: 1rem 2rem;
 }
@@ -529,7 +533,7 @@ header.masthead p {
 .btn:hover, .btn:focus, .btn:active, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color:#fff;
   background-color: #A0CCDA !important;	
-  border-color: #3c6F9b;
+  border-color: #626c75;
 }
 
 .btn-primary {
@@ -657,14 +661,7 @@ ul.safetyList {
   margin-bottom: 35px;
   height: 28vh;
 }
-.categories {
-  width: 100%;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 35px;
-  
-}
+
 
 .team-members .team-avatar {
   position: relative;
@@ -696,24 +693,13 @@ ul.safetyList {
   size: inherit;
 }
 
-.categories .team-avatar:after {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: " ";
-  position: absolute;
-  background: rgba(129, 129, 129, 0.1);
-  transition-duration: 300ms;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
-}
+
 
 .categories .team-avatar img {
   display: block;
   margin: 0 auto;
   text-align: center;
-  width: 100%;
+  width: 70%;
 }
 
 
@@ -779,12 +765,7 @@ ul.safetyList {
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 }
 
-.categories:hover .team-avatar:after {
-  /*background: rgba(47, 60, 72, 0.5);*/
-  transition-duration: 300ms;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
-}
+
 
 .team-members:hover .team-desc {
   -webkit-transform: translate3d(0, -15%, 0);
@@ -828,21 +809,7 @@ ul.safetyList {
 }
 
 
-.categories:hover .team-desc {
-  -webkit-transform: translate3d(0, -15%, 0);
-  transform: translate3d(0, -15%, 0);
-  -webkit-transform: translate3d(0, -20%, 0);
-  transform: translate3d(0, -30%, 0);
-}
 
-.categories:hover .team-desc {
-  opacity: 1;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
-}
 
 .team-size{
   max-width: 70vw;
@@ -1000,9 +967,9 @@ height: 10px;
   .schedule {
     display: -ms-grid;
     display: grid;
-    grid-gap: 1em;
-    -ms-grid-rows: [tracks] auto [time-0000] 0.5fr [time-0400] 0.5fr [time-0500] 0.5fr [time-0700] 0.5fr [time-0800] 0.5fr [time-0900] 0.5fr [time-0930] 0.5fr [time-1000] 0.5fr [time-1030] 0.5fr [time-1230] 0.5fr [time-1300] 0.5fr [time-1400] 0.5fr [time-1500] 0.5fr [time-1530] 0.5fr [time-1900] 0.5fr [time-1930] 0.5fr [time-2000] 0.5fr [time-2030] 0.5fr [time-2130] 0.5fr [time-2359] 0.5fr;
-        grid-template-rows: [tracks] auto [time-0000] 0.5fr [time-0400] 0.5fr [time-0500] 0.5fr [time-0700] 0.5fr [time-0800] 0.5fr [time-0900] 0.5fr [time-0930] 0.5fr [time-1000] 0.5fr [time-1030] 0.5fr [time-1230] 0.5fr  [time-1300] 0.5fr [time-1400] 0.5fr [time-1500] 0.5fr [time-1530] 0.5fr [time-1900] 0.5fr [time-1930] 0.5fr [time-2000] 0.5fr [time-2030] 0.5fr [time-2130] 0.5fr [time-2359] 0.5fr;
+    grid-gap: 0.5em;
+    -ms-grid-rows: [tracks] auto [time-0000] 0.25fr [time-0030] 0.25fr [time-0100] 0.25fr [time-0130] 0.25fr [time-0200] 0.25fr [time-0230] 0.25fr [time-0300] 0.25fr [time-0330] 0.25fr [time-0400] 0.25fr [time-0430] 0.25fr [time-0500] 0.25fr [time-0530] 0.25fr [time-0600] 0.25fr [time-0630] 0.25fr [time-0700] 0.25fr [time-0730] 0.25fr [time-0800] 0.25fr [time-0830] 0.25fr [time-0900] 0.25fr [time-0930] 0.25fr [time-1000] 0.25fr [time-1030] 0.25fr [time-1100] 0.25fr [time-1130] 0.25fr [time-1200] 0.25fr [time-1230] 0.25fr [time-1300] 0.25fr [time-1330] 0.25fr [time-1400] 0.25fr [time-1430] 0.25fr [time-1500] 0.25fr [time-1530] 0.25fr [time-1600] 0.25fr [time-1630] 0.25fr [time-1700] 0.25fr [time-1730] 0.25fr [time-1800] 0.25fr [time-1830] 0.25fr [time-1900] 0.25fr [time-1930] 0.25fr [time-2000] 0.25fr [time-2030] 0.25fr [time-2100] 0.25fr [time-2130] 0.25fr [time-2200] 0.25fr [time-2230] 0.25fr [time-2300] 0.25fr [time-2330] 0.25fr [time-2359] 0.25fr;
+        grid-template-rows: [tracks] auto [time-0000] 0.25fr [time-0030] 0.25fr [time-0100] 0.25fr [time-0130] 0.25fr [time-0200] 0.25fr [time-0230] 0.25fr [time-0300] 0.25fr [time-0330] 0.25fr [time-0400] 0.25fr [time-0430] 0.25fr [time-0500] 0.25fr [time-0530] 0.25fr [time-0600] 0.25fr [time-0630] 0.25fr [time-0700] 0.25fr [time-0730] 0.25fr [time-0800] 0.25fr [time-0830] 0.25fr [time-0900] 0.25fr [time-0930] 0.25fr [time-1000] 0.25fr [time-1030] 0.25fr [time-1100] 0.25fr [time-1130] 0.25fr [time-1200] 0.25fr [time-1230] 0.25fr [time-1300] 0.25fr [time-1330] 0.25fr [time-1400] 0.25fr [time-1430] 0.25fr [time-1500] 0.25fr [time-1530] 0.25fr [time-1600] 0.25fr [time-1630] 0.25fr [time-1700] 0.25fr [time-1730] 0.25fr [time-1800] 0.25fr [time-1830] 0.25fr [time-1900] 0.25fr [time-1930] 0.25fr [time-2000] 0.25fr [time-2030] 0.25fr [time-2100] 0.25fr [time-2130] 0.25fr [time-2200] 0.25fr [time-2230] 0.25fr [time-2300] 0.25fr [time-2330] 0.25fr [time-2359] 0.25fr;
     
         -ms-grid-columns: [times] 4em [track-1-start] 1fr [track-1-end track-2-start] 1fr [track-2-end track-3-start] 1fr [track-3-end track-4-start] 1fr [track-4-end];
         grid-template-columns: [times] 4em [track-1-start] 1fr [track-1-end track-2-start] 1fr [track-2-end track-3-start] 1fr [track-3-end track-4-start] 1fr [track-4-end];
@@ -1095,34 +1062,111 @@ height: 10px;
 .track-1 {
   background-color: #1259B2;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .track-5 {
   background-color: #80aadd;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 } 
 
 .track-6 {
   background-color: #544D69;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 } 
 .track-2 {
   background-color: #69963f;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .track-3 {
   background-color: #544D69;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .track-4 {
   background-color: #c35500;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .track-7 {
   background-color: #c7aa08;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .track-all {
