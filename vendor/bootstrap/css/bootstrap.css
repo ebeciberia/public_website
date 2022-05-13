@@ -481,6 +481,10 @@ mark,
   height: auto;
 }
 
+.img-thumbnail:hover {
+  transform: scale(1.15);
+}
+
 
 .figure {
   display: inline-block;
