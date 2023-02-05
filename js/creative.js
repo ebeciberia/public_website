@@ -181,7 +181,7 @@ const seconds = document.querySelectorAll('seconds');
 
 const currentYear= new Date().getFullYear();
 
-const newYearTime= new Date("May 13 2022 15:00:00");
+const newYearTime= new Date("May 5 2023 15:00:00");
 
 
 
