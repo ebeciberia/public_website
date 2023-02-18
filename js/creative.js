@@ -26,20 +26,21 @@
     offset: 57
   });
 //Change logo on scrolling
-	$(window).scroll(function() {
-    if ($(".navbar").offset().top > 100) {
-        $('#custom-nav').addClass('affix');
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-			  $('.navbar-brand img').attr('width','80%');
+// FIXME Great idea but needs refurbishment
+//  $(window).scroll(function() {
+//     if ($(".navbar").offset().top > 100) {
+//         $('#custom-nav').addClass('affix');
+//         $(".navbar-fixed-top").addClass("top-nav-collapse");
+// 			  $('.navbar-brand img').attr('width','80%');
 
 
-    } else {
-        $('#custom-nav').removeClass('affix');
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-							  $('.navbar-brand img').attr('width','100%');
+//     } else {
+//         $('#custom-nav').removeClass('affix');
+//         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+//         $('.navbar-brand img').attr('width','100%');
 
-    }   
-});
+//     }
+// });
   // Collapse Navbar
   var navbarCollapse = function() {
     if ($("#mainNav").offset().top > 100) {
